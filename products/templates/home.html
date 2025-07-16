@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1>Welcome to PyShop</h1>
+    <p class="lead">Choose a category to explore:</p>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <!-- 進入產品列表 -->
+        <a href="{% url 'index' %}" class="btn btn-primary btn-lg">Go to Products</a>
+
+        <!-- 其他選項可再加 -->
+        <a href="#" class="btn btn-secondary btn-lg">待新增</a>
+    </div>
+</div>
+{% endblock %}

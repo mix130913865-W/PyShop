@@ -2,20 +2,23 @@
 {% block title %}Product List - PyShop{% endblock %}
 
 {% block content %}
-<h1>Product</h1>
-<div class="row">
-    {% for product in products %}
-    <div class="col-md-4"> <!-- 每行三欄 -->
-        <div class="card" style="width: 20rem; height: 30rem;"><!-- 卡片固定寬度 -->
-            <img src="{{ product.image_url }}" class="card-img-top"
-                style="height: 300px; width: auto; max-width: 100%; object-fit: contain;" alt="{{ product.name }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">${{ product.price }}</p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+<div class="container mt-3">
+    <!-- 回首頁按鈕 -->
+    <a href="{% url 'home' %}" class="btn btn-secondary mb-3">← Back to Home</a>
+    <h1>Product</h1>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4"> <!-- 每行幾欄 -->
+            <div class="card" style="width: 20rem; height: 30rem;"><!-- 卡片寬高 -->
+                <img src="{{ product.image_url }}" class="card-img-top"
+                    style="height: 300px; width: auto; max-width: 100%; object-fit: contain;" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">${{ product.price }}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-{% endblock %}
+    {% endblock %}
