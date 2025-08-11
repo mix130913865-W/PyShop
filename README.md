@@ -37,7 +37,7 @@ source venv/bin/activate
 # Windows
 venv\Scripts\activate
 
-3. Install dependencies (if requirements.txt is available)
+3. Install dependencies
 
 pip install -r requirements.txt
 
@@ -45,13 +45,9 @@ pip install -r requirements.txt
 
 python manage.py migrate
 
-5. (Optional) Create a superuser for admin access
-
-python manage.py createsuperuser
-
-6. Start the development server
+5. Start the development server
 
 python manage.py runserver
 
-7. Open http://127.0.0.1:8000 in your browser
+6. Open http://127.0.0.1:8000
 
